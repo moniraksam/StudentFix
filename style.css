@@ -1,0 +1,135 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    overflow: scroll;
+    background-color: white;
+}
+
+/* Haut de page */
+
+.navBar {
+    list-style-type: none;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+}
+
+
+.mdl-layout__header .mdl-navigation__link {
+    font-size: 24px !important;
+    color: black !important;
+
+}
+
+.mdl-layout-title {
+    font-size: 24px !important;
+    color: black !important;
+}
+
+
+.mdl-layout-title {
+    font-size: 32px;
+}
+
+
+/* Banner */
+
+.bannerText {
+    color: white;
+    font-style: italic;
+    font-size: 60px;
+    max-width: 90%;
+    font-weight: 700;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    height: 1vh;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 65vh;
+}
+
+.banner {
+    background: url('assets/banner.jpg') center / cover;
+    height: 55vh;
+    width: 100%;
+}
+
+
+/* Main Content area */
+
+.mainContent {
+    margin: 20px;
+}
+
+.mainTextTitle {
+    margin: 50px;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+}
+
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+}
+
+.demo-card-wide >.mdl-card__menu {
+    color: #fff;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card1 .mdl-card__title {
+    background: url('assets/card1-min.jpg') center / cover;
+}
+
+.card2 .mdl-card__title {
+    background: url('assets/card2.jpg') center / cover;
+
+}
+
+.card3 .mdl-card__title {
+    background: url('assets/card3-min.jpg') center / cover;
+
+}
+
+.mdl-card__title-text {
+    color:#3f51b5;
+    background: rgb(255, 255, 255);
+    padding:10px;
+}
+
+
+/* Footer */
+
+.customFooter {
+    padding: 10px;
+    background: #fbf9f9;
+    text-align: center;
+    position: relative;
+
+}
+
+.customFooter span {
+    margin: 75px;
+}
