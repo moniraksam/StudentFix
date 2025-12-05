@@ -29,7 +29,7 @@
                 <!-- Navigation -->
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.html">Accueil</a>
-                    <a class="mdl-navigation__link" href="">Contacte</a>
+                    <a class="mdl-navigation__link" href="contact.html">Contacte</a>
                 </nav>
             </div>
         </header>
@@ -40,9 +40,58 @@
                 </header>
 
                 <div class="hero">
-                    <p class="bannerText"> Votre solution de réparations pour étudiants, par étudiants. </p>
+                    <p class="bannerText"> Contacte </p>
                 </div>
             </div>
+            <div class="formContact mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp mdl-card-contact">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Contactez-nous</h2>
+                        </div>
+
+                        <div class="mdl-card__supporting-text">
+                            <form id="formContact">
+
+                                <!-- Nom -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nom" required>
+                                    <label class="mdl-textfield__label" for="nom">Nom</label>
+                                </div>
+
+                                <!-- Prénom -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="prenom" required>
+                                    <label class="mdl-textfield__label" for="prenom">Prénom</label>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="email" id="email" required>
+                                    <label class="mdl-textfield__label" for="email">Adresse courriel</label>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <textarea class="mdl-textfield__input" type="text" rows="3" id="message"
+                                        required></textarea>
+                                    <label class="mdl-textfield__label" for="message">Votre message</label>
+                                </div>
+
+                                <!-- Submit -->
+                                <div class="mdl-card__actions">
+                                    <button type="submit"
+                                        class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                        Envoyer
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
 
         </main>
         <footer class="customFooter">
