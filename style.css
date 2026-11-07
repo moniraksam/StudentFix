@@ -1,10 +1,29 @@
+/* Palette orange / brun */
+
+:root {
+    --espresso: #3E2417;
+    --brown: #7A4328;
+    --burnt-orange: #B4501F;
+    --orange: #E07B39;
+    --amber: #E0A458;
+    --sand: #E8C9A0;
+    --cream: #FBF1E3;
+    --cream-light: #FFF9F0;
+    --shadow: rgba(62, 36, 23, 0.22);
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
 
 body {
     overflow: scroll;
-    background-color: white;
+    color: var(--espresso);
+    background:
+        radial-gradient(circle at 8% 15%, rgba(224, 123, 57, 0.14), transparent 40%),
+        radial-gradient(circle at 92% 65%, rgba(122, 67, 40, 0.12), transparent 45%),
+        var(--cream);
+    background-attachment: fixed;
 }
 
 /* Haut de page */
@@ -19,21 +38,23 @@ body {
     margin-right: 16px;
 }
 
+/* Barre du haut */
+.demo-layout-transparent.mdl-layout > .mdl-layout__header {
+    background: var(--sand);
+    border-bottom: 4px solid var(--orange);
+    box-shadow: 0 2px 10px var(--shadow);
+}
 
 .mdl-layout__header .mdl-navigation__link {
     font-size: 24px !important;
-    color: black !important;
-
+    color: var(--espresso) !important;
+    font-weight: 500;
 }
 
 .mdl-layout-title {
     font-size: 24px !important;
-    color: black !important;
-}
-
-
-.mdl-layout-title {
-    font-size: 32px;
+    color: var(--espresso) !important;
+    font-weight: 700;
 }
 
 
@@ -57,8 +78,12 @@ body {
     height: 65vh;
 }
 
+/* Voile orange/brun par-dessus la photo pour l'accorder au thème */
 .banner {
-    background: url('assets/banner.jpg') center / cover;
+    background:
+        linear-gradient(180deg, rgba(62, 36, 23, 0.25), rgba(180, 80, 31, 0.45)),
+        url('assets/banner.jpg') center / cover;
+    border-bottom: 6px solid var(--orange);
     height: 55vh;
     width: 100%;
 }
@@ -75,21 +100,19 @@ body {
     margin: 50px;
     font-weight: 700;
     font-size: 50px;
+    color: var(--espresso);
     text-align: center !important;
-
 }
 
-.demo-card-wide.mdl-card {
-    width: 512px;
-}
-
-.demo-card-wide>.mdl-card__title {
-    color: #fff;
-    height: 176px;
-}
-
-.demo-card-wide>.mdl-card__menu {
-    color: #fff;
+/* Petit trait orange sous les titres de section */
+.mainTextTitle::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 6px;
+    margin: 14px auto 0;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--amber));
 }
 
 .cardsContainer {
@@ -101,35 +124,119 @@ body {
 }
 
 
+/* Cartes (communes) */
+
+.mdl-card {
+    border-radius: 16px;
+}
+
+.mdl-card__title-text {
+    color: var(--espresso);
+    background: var(--cream-light);
+    padding: 10px 14px;
+    border-left: 6px solid var(--orange);
+    border-radius: 0 8px 8px 0;
+    font-weight: 500;
+}
+
+
+/* Cartes Services (avec images) */
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+    max-width: 100%;
+    background: var(--cream-light);
+}
+
+.demo-card-wide>.mdl-card__title {
+    color: #fff;
+    height: 176px;
+}
+
+.demo-card-wide>.mdl-card__menu {
+    color: #fff;
+}
+
+.demo-card-wide .mdl-card__supporting-text {
+    color: var(--espresso);
+}
+
+.demo-card-wide .mdl-card__actions.mdl-card--border {
+    border-top: 1px solid rgba(122, 67, 40, 0.25);
+}
+
+.mdl-card__actions .mdl-button--colored {
+    background: var(--burnt-orange);
+    color: var(--cream-light);
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 0 18px;
+}
+
 .card1 .mdl-card__title {
     background: url('assets/card1-min.jpg') center / cover;
 }
 
 .card2 .mdl-card__title {
     background: url('assets/card2.jpg') center / cover;
-
 }
 
 .card3 .mdl-card__title {
     background: url('assets/card3-min.jpg') center / cover;
-
 }
 
-.mdl-card__title-text {
-    color: #3f51b5;
-    background: rgb(255, 255, 255);
-    padding: 10px;
-}
+
+/* Cartes Missions */
 
 .demo-card-square.mdl-card {
     width: 320px;
     height: 320px;
+    background: var(--card-bg, var(--burnt-orange));
+    color: var(--card-fg, var(--cream-light));
 }
 
 .demo-card-square>.mdl-card__title {
-    color: #fff;
-    background:
-        url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+    background: none;
+    color: inherit;
+}
+
+.demo-card-square .mdl-card__title-text {
+    background: transparent;
+    border-left: none;
+    border-radius: 0;
+    padding: 0;
+    color: inherit;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.demo-card-square .mdl-card__supporting-text {
+    color: inherit;
+    line-height: 1.45;
+}
+
+
+.demo-card-square:nth-child(1) {
+    --card-bg: var(--burnt-orange);
+    --card-fg: var(--cream-light);
+}
+
+
+.demo-card-square:nth-child(2) {
+    --card-bg: var(--amber);
+    --card-fg: var(--espresso);
+}
+
+
+.demo-card-square:nth-child(3) {
+    --card-bg: var(--brown);
+    --card-fg: var(--cream-light);
+}
+
+
+.demo-card-square:nth-child(4) {
+    --card-bg: var(--sand);
+    --card-fg: var(--espresso);
 }
 
 
@@ -140,18 +247,3 @@ form {
     height: 200px;
 }
 
-
-
-/* Footer */
-
-.customFooter {
-    padding: 10px;
-    background: #fbf9f9;
-    text-align: center;
-    position: relative;
-
-}
-
-.customFooter span {
-    margin: 75px;
-}
