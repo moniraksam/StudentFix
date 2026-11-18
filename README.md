@@ -1,3 +1,3 @@
-# STUDENT FIX
+# Student Fix
 
-Site vitrine fait pendant l'UE "Professionnalisation", L2 MIAGE Toulouse. Rédigé en quelque heures pendant l'UE à la base, ajout de CSS plus profonds quelque mois plus tard.
+Site vitrine réalisé dans le cadre de l'UE « Professionnalisation » (L2 MIAGE, Toulouse). La première version a été développée en quelques heures pendant le cours, puis la mise en forme CSS a été approfondie plus tard.
